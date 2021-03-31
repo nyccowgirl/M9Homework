@@ -45,12 +45,11 @@ SORT:
     14, 19, 24, 11, 1, 5, 7, 2
     quickSort(a, 0, 7), mid=3
     2, 19, 24, 11, 1, 5, 7, 14
-    2, 19, 24, 11, 1, 5, 7, 14
     2, 19, 24, 7, 1, 5, 11, 14
     2, 5, 1, 7, 24, 19, 11, 14
     2, 5, 1, 7, 11, 19, 24, 14
-    quickSort(a, 0, 2)
-    quickSort(a, 4, 7)
+    quickSort(a, 0, 3)
+    quickSort(a, 5, 7)
 
 6.  merge sort splits a list of number in half, it keeps splitting the next set of lists in half until each number
     is its own list. then it compares each pair of number and sorts the two to create a list of 2 numbers. it then
