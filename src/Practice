@@ -1,0 +1,98 @@
+SORT:
+
+1.  selection sort
+    14, 19, 24, 11, 1, 5, 7, 2
+    1, 19, 24, 11, 14, 5, 7, 2
+    1, 2, 24, 11, 14, 5, 7, 19
+    1, 2, 5, 11, 14, 24, 7, 19
+    1, 2, 5, 7, 14, 24, 11, 19
+    1, 2, 5, 7, 11, 24, 14, 19
+    1, 2, 5, 7, 11, 14, 24, 19
+    1, 2, 5, 7, 11, 14, 19, 24
+
+2.  insertion sort
+    14, 19, 24, 11, 1, 5, 7, 2
+    14, 19, 24, 11, 1, 5, 7, 2
+    14, 19, 24, 11, 1, 5, 7, 2
+    11, 14, 19, 24, 1, 5, 7, 2
+    1, 11, 14, 19, 24, 5, 7, 2
+    1, 5, 11, 14, 19, 24, 7, 2
+    1, 5, 7, 11, 14, 19, 24, 2
+    1, 2, 5, 7, 11, 14, 19, 24
+
+3. shell sort
+    8/2 = 4, increment to 5
+    14, 19, 24, 11, 1, 5, 7, 2
+    5, 19, 24, 11, 1, 14, 7, 2
+    5, 7, 24, 11, 1, 14, 19, 2
+    5, 7, 2, 11, 1, 14, 19, 24
+    5/2 = 2, increment to 3
+    5, 7, 2, 11, 1, 14, 19, 24
+    5, 1, 2, 11, 7, 14, 19, 24
+    3/2 = 1, insertion sort
+    1, 2, 5, 7, 11, 15, 19, 24
+
+4.  merge sort
+    14, 19, 24, 11, 1, 5, 7, 2
+    14, 19, 24, 11    1, 5, 7, 2
+    14, 19  24, 11    1, 5  7, 2
+    14  19  24  11    1  5  7  2
+    14, 19  11, 24    1, 5  2, 7
+    11, 14, 19, 24    1, 2, 5, 7
+    1, 2, 5, 7, 11, 14, 19, 24
+
+5.  quick sort
+    14, 19, 24, 11, 1, 5, 7, 2
+    quickSort(a, 0, 7), mid=3
+    2, 19, 24, 11, 1, 5, 7, 14
+    2, 19, 24, 11, 1, 5, 7, 14
+    2, 19, 24, 7, 1, 5, 11, 14
+    2, 5, 1, 7, 24, 19, 11, 14
+    2, 5, 1, 7, 11, 19, 24, 14
+    quickSort(a, 0, 2)
+    quickSort(a, 4, 7)
+
+6.  merge sort splits a list of number in half, it keeps splitting the next set of lists in half until each number
+    is its own list. then it compares each pair of number and sorts the two to create a list of 2 numbers. it then
+    compares the two adjacent lists and sorts the 4 numbers to make another list. then it sorts the next to adjacent
+    lists to sort the 8 numbers from the 2 sets of lists, and keeps combining lists until all numbers are sorted.
+
+7.  similar to #6, merge sort can be sorted in reverse by doing same algorithm; however, as the lists are combined, the
+    numbers are sorted in descending order with highest number first.
+
+8.  stable sort is if same values appear in same order in sorted array as original array. insertion or merge sorts would
+    be stable sorts.
+
+9.  in-place sorts include selection and insertion sorts, and would be considered for very large lists with memory
+    limitations.
+
+10. bubble sort compares adjacent elements and swaps them as appropriate. it makes multiple passes until all numbers
+    are in the right place. it has O(n^2) complexity with best case at O(n) if list is already sorted. it is stable and
+    in-place sort.
+
+SEARCH:
+
+Unsorted Data Set: 2, 6, 7, 13, 3, 5, 4, 8, 9, 1
+Sorted Data Set: 1, 4, 9, 12, 13, 15, 18, 20, 21, 22, 23, 28
+
+1.  trace for 4 and then 11 for unsorted
+    2 -> 6 -> 7 -> 13 -> 3 -> 5 -> 4, true
+    2 -> 6 -> 7 -> 13 -> 3 -> 5 -> 4 -> 8 ->9 -> 1, false
+
+2.  trace for 15 and then 17 for sorted
+    1 -> 4 -> 9 -> 12 -> 13 -> 15, true
+    1 -> 4 -> 9 -> 12 -> 13 -> 15 -> 18, false
+
+3.  trace for 1 and then 14 for sorted
+    first = 0, last = 11, mid = 5, 15 > 1
+    first = 0, last = 4, mid = 2, 9 > 1
+    first = 0, last = 1, mid = 0, found
+    first = 0, last = 11, mid = 5, 15 > 14
+    first = 0, last = 4, mid = 2, 9 < 14
+    first = 3, last = 4, mid = 3, 12 < 14
+    first = 4, last = 4, mid = 4, 13 < 14
+    first = 5, last = 4, first > last, not found
+
+
+
+
