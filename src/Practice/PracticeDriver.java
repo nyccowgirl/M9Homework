@@ -1,7 +1,9 @@
+package Practice;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Practice {
+public class PracticeDriver {
 
     public static void main(String[] args) {
         Integer[] array1 = {1, 3, 5, 11, 2, 8, 3, 2, 15};
